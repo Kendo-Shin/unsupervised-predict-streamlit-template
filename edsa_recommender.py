@@ -50,7 +50,7 @@ def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["Homepage","Information","Recommender System","About us"]
+    page_options = ["Recommender System","Homepage","Information","About us"]
 
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
@@ -130,8 +130,14 @@ def main():
         if selection == "General Information":
             st.info("General Information")
 			# You can read a markdown file from supporting resources folder
-            info_markdown = read_markdown_file("resources/info.md")
+            info_markdown = read_markdown_file("resources/info1.md")
             st.markdown(info_markdown)
+            
+            st.image('resources/imgs/recommend.png', use_column_width=True)
+
+            info_markdown = read_markdown_file("resources/info2.md")
+            st.markdown(info_markdown)
+
         
         if selection == "EDA":
             st.info("Exploratory Data Analysis")
